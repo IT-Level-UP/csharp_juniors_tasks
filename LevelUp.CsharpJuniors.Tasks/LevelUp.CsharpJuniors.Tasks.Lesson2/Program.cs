@@ -36,7 +36,6 @@ Console.WriteLine($"Current dt: {DateTime.Now}, weather is {weather}");
 
 // 6. Print current date and time
 Console.WriteLine(DateTime.Now);
-*/
 
 // 7. Create a class Student
 var name = "Ivan Petrov";
@@ -49,6 +48,7 @@ var student = new Student(name, groupNumber, courseNumber);
 Console.WriteLine($"Name: {student.Name}, Group: {student.GroupNumber}, Cource: {student.CourseNumber}");
 student.PrintInfo();
 Console.WriteLine(student);
+*/
 
 // 9. Create a record Engineer
 
@@ -64,3 +64,5 @@ Console.WriteLine(student);
 // 12. Try Garbage Collector
 // var gcTest = new GarbageCollector();
 // gcTest.TryCollect();
+
+new Strings().PlayWithStrings();

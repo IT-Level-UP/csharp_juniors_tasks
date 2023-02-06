@@ -14,10 +14,9 @@ namespace LevelUp.CsharpJuniors.Tasks.Lesson2
     // Core aspects... are very complex thing(encoding, equality, regional aspects etc.)
     public class Strings
 	{
-		public Strings()
-		{
-			
-		}
+		public void PlayWithStrings()
+        {
+        }
 	}
 }
 
