@@ -1,5 +1,4 @@
 ﻿using LevelUp.CsharpJuniors.Tasks.Lesson2;
-using LevelUp.CsharpJuniors.Tasks.Lesson2.Models;
 
 Console.WriteLine("Let's play with C#");
 
@@ -65,4 +64,7 @@ Console.WriteLine(student);
 // var gcTest = new GarbageCollector();
 // gcTest.TryCollect();
 
-new Strings().PlayWithStrings();
+// new Strings().PlayWithStrings();
+// new Exceptions().PlayWithExceptions(100, 0);
+
+new Debugging().PlayWithDebugging();
