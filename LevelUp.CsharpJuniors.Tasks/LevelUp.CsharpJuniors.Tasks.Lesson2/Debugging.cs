@@ -4,25 +4,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace LevelUp.CsharpJuniors.Tasks.Lesson2
+namespace LevelUp.CsharpJuniors.Tasks.Lesson2;
+
+public sealed class Debugging
 {
-    internal class Debugging
+    public void PlayWithDebugging()
     {
-        public void PlayWithDebugging()
-        {
-            var someVariable = 12;
-            var oneMoreVariable = 6;
+        var someVariable = 12;
+        var oneMoreVariable = 6;
 
-            var result = someVariable / oneMoreVariable;
+        var result = someVariable / oneMoreVariable;
 
-            InternalMethod();
+        InternalMethod();
 
-            Console.WriteLine(result);
-        }
+        Console.WriteLine(result);
+    }
 
-        private void InternalMethod()
-        {
-            Console.WriteLine("Internal method has been called");
-        }
+    private void InternalMethod()
+    {
+        Console.WriteLine("Internal method has been called");
     }
 }

@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LevelUp.CsharpJuniors.Tasks
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LevelUp.CsharpJuniors.Tasks.Lesson4", "LevelUp.CsharpJuniors.Tasks.Lesson4\LevelUp.CsharpJuniors.Tasks.Lesson4.csproj", "{C6D1B386-6A02-4E69-AA15-0756468B7B96}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LevelUp.CsharpJuniors.Tasks.Lesson5", "LevelUp.CsharpJuniors.Tasks.Lesson5\LevelUp.CsharpJuniors.Tasks.Lesson5.csproj", "{625BDE90-4F51-42C7-937C-1CA475D44ACE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{C6D1B386-6A02-4E69-AA15-0756468B7B96}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C6D1B386-6A02-4E69-AA15-0756468B7B96}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C6D1B386-6A02-4E69-AA15-0756468B7B96}.Release|Any CPU.Build.0 = Release|Any CPU
+		{625BDE90-4F51-42C7-937C-1CA475D44ACE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{625BDE90-4F51-42C7-937C-1CA475D44ACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{625BDE90-4F51-42C7-937C-1CA475D44ACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{625BDE90-4F51-42C7-937C-1CA475D44ACE}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

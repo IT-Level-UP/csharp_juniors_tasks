@@ -1,11 +1,9 @@
 ﻿using System;
-namespace LevelUp.CsharpJuniors.Tasks.Lesson2
+namespace LevelUp.CsharpJuniors.Tasks.Lesson2;
+
+public class AccessModifiers
 {
-	public class AccessModifiers
+	public AccessModifiers()
 	{
-		public AccessModifiers()
-		{
-		}
 	}
 }
-

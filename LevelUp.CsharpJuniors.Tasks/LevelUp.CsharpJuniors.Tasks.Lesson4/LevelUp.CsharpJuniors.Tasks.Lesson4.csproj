@@ -11,7 +11,6 @@
       <Folder Include="Attributes" />
       <Folder Include="Generics" />
       <Folder Include="Reflection" />
-      <Folder Include="Statics" />
     </ItemGroup>
 
 </Project>

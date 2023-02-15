@@ -1,11 +1,9 @@
 ﻿using System;
-namespace LevelUp.CsharpJuniors.Tasks.Lesson2
+namespace LevelUp.CsharpJuniors.Tasks.Lesson2;
+
+public class Operators
 {
-	public class Operators
+	public Operators()
 	{
-		public Operators()
-		{
-		}
 	}
 }
-
