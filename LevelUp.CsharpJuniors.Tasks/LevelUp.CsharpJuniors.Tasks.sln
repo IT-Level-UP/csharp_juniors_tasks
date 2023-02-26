@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LevelUp.CsharpJuniors.Tasks
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LevelUp.CsharpJuniors.Tasks.Lesson5", "LevelUp.CsharpJuniors.Tasks.Lesson5\LevelUp.CsharpJuniors.Tasks.Lesson5.csproj", "{625BDE90-4F51-42C7-937C-1CA475D44ACE}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LevelUp.CsharpJuniors.Tasks.Lesson7", "LevelUp.CsharpJuniors.Tasks.Lesson7\LevelUp.CsharpJuniors.Tasks.Lesson7.csproj", "{2E2F0FB0-D8C9-4C98-8B5B-E62DDB330FED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{625BDE90-4F51-42C7-937C-1CA475D44ACE}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{625BDE90-4F51-42C7-937C-1CA475D44ACE}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{625BDE90-4F51-42C7-937C-1CA475D44ACE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E2F0FB0-D8C9-4C98-8B5B-E62DDB330FED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E2F0FB0-D8C9-4C98-8B5B-E62DDB330FED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E2F0FB0-D8C9-4C98-8B5B-E62DDB330FED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E2F0FB0-D8C9-4C98-8B5B-E62DDB330FED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
