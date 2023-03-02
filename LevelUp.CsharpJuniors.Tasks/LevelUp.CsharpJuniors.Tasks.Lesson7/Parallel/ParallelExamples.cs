@@ -10,6 +10,7 @@ public static class ParallelExamples
     public static void DealWithParallelForEach()
     {
         var range = Enumerable.Range(0, 10);
+
         System.Threading.Tasks.Parallel.ForEach(range, LongRunningOperation);
     }
     

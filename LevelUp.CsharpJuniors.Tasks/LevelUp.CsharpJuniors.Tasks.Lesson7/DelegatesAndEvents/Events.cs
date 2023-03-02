@@ -2,13 +2,13 @@
 
 public class EventGenerator
 {
-    public delegate void MessageReceivedEventHandler(object sender, MessageReceivedEventArgs eventArgs); 
+    public delegate void MessageReceivedEventHandler(object sender);
     
     public event MessageReceivedEventHandler? MessageReceivedEvent;
     
     public virtual void RaiseEvent()
     {
-        MessageReceivedEvent?.Invoke(this, new MessageReceivedEventArgs("Hello"));
+        MessageReceivedEvent?.Invoke(this);
     }
 }
 
@@ -32,8 +32,8 @@ public sealed class EventListener
         eventGenerator.MessageReceivedEvent += Listen;
     }
     
-    private void Listen(object sender, MessageReceivedEventArgs eventArgs)
+    private void Listen(object sender)
     {
-         Console.WriteLine($"Listener {_listenerId} received message: {eventArgs.Message}");
+        Console.WriteLine($"Listener {_listenerId} received message from {sender}");
     }
 }

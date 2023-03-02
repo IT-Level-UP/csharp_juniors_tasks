@@ -56,7 +56,7 @@ public static class TaskExamples
         cts.CancelAfter(100);
         
         var task = Task.Run(() => DoLongRunningWork(10000, cts.Token), cts.Token);
-
+        
         Console.WriteLine(task.Status);
         
         Thread.Sleep(3000);
@@ -84,7 +84,7 @@ public static class TaskExamples
     }
 
     public static async Task DealWithTaskContinuations()
-    {
+    {   
         var firstTask = Task.Run(DoWork);
         var secondTask = () => Console.WriteLine("I'd run only if the first task will be finished correctly");
         Action thirdTask = () => throw new Exception();

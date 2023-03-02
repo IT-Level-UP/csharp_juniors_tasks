@@ -1,3 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿using LevelUp.CsharpJuniors.Tasks.Lesson7.DelegatesAndEvents;
 
-Console.WriteLine("Hello, World!");
+var events = new DelegatesExamples();
+events.DealWithEvents();
