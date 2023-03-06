@@ -1,3 +1,4 @@
+using SimpleStore.Api.DAL;
 using SimpleStore.Api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -10,7 +11,9 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
 // Dependencies
-builder.Services.AddSingleton<IProductsService, ProductsService>();
+builder.Services.AddDbContext<ProductsDbContext>();
+builder.Services.AddScoped<IProductsRepository, ProductsRepository>();
+builder.Services.AddScoped<IProductsService, ProductsService>();
 
 var app = builder.Build();
 

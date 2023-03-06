@@ -1,32 +1,20 @@
-﻿using SimpleStore.Api.Models;
+﻿using SimpleStore.Api.DAL;
+using SimpleStore.Api.Models;
 
 namespace SimpleStore.Api.Services;
 
 public sealed class ProductsService : IProductsService
 {
-    private Dictionary<Guid, ProductItem> _products = new();
+    private readonly IProductsRepository _productsRepository;
 
-    public ProductsService()
+    public ProductsService(IProductsRepository productsRepository)
     {
-        InitProducts();
+        _productsRepository = productsRepository;
     }
     
-    public IEnumerable<ProductItem> GetProducts()
+    public async Task<IEnumerable<ProductItem>> GetProducts()
     {
-        return _products.Values;
-    }
-
-    private void InitProducts()
-    {
-        var guid1 = Guid.NewGuid();
-        var guid2 = Guid.NewGuid();
-        var guid3 = Guid.NewGuid();
-
-        _products = new Dictionary<Guid, ProductItem>
-        {
-            { guid1, new ProductItem(guid1, "Печенье", "Сдобное") },
-            { guid2, new ProductItem(guid2, "Мармелад", "Мишки") },
-            { guid3, new ProductItem(guid3, "Шоколадка", "С орехами") },
-        };
+        var entities = await _productsRepository.GetAllProducts();
+        return entities.Select(e => new ProductItem(e.Id, e.Name, e.Description));
     }
 }
