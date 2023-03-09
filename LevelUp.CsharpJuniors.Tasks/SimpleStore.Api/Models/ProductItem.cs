@@ -1,3 +1,3 @@
 ﻿namespace SimpleStore.Api.Models;
 
-public sealed record ProductItem(Guid Id, string Name, string? Description);
+public sealed record ProductItem(Guid Id, string Name, Guid CategoryId, string? Description);

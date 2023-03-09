@@ -16,9 +16,16 @@ public sealed class ProductsController : ControllerBase
     }
 
     [HttpGet("all")]
-    public ActionResult<IEnumerable<ProductItem>> GetProducts()
+    public async Task<ActionResult<IEnumerable<ProductItem>>> GetProducts()
     {
-        var products = _productsService.GetProducts();
+        var products = await _productsService.GetProducts();
         return Ok(products);
+    }
+
+    [HttpPost("add")]
+    public async Task<IActionResult> AddProduct(ProductItem productItem)
+    {
+        await _productsService.AddProduct(productItem);
+        return Ok();
     }
 }

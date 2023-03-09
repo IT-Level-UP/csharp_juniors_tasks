@@ -11,8 +11,14 @@ public sealed class ProductsRepository : IProductsRepository
         _dbContext = dbContext;
     }
 
-    public Task<IEnumerable<ProductEntity>> GetAllProducts()
+    public Task<IEnumerable<ProductEntity>> GetAll()
     {
-        return Task.FromResult(Enumerable.Empty<ProductEntity>());
+        return Task.FromResult<IEnumerable<ProductEntity>>(_dbContext.Products!.ToList());
+    }
+
+    public async Task Create(ProductEntity entity)
+    {
+        await _dbContext.Products!.AddAsync(entity);
+        await _dbContext.SaveChangesAsync();
     }
 }
