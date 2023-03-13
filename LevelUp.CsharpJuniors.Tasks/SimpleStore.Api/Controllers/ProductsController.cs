@@ -22,6 +22,14 @@ public sealed class ProductsController : ControllerBase
         return Ok(products);
     }
 
+    [HttpGet("{productId}")]
+    public async Task<ActionResult<ProductItem>> GetById(Guid productId)
+    {
+        var product = await _productsService.GetProductById(productId);
+        return product == null ? NotFound() : Ok(product);
+    }
+    
+    
     [HttpPost("add")]
     public async Task<IActionResult> AddProduct(ProductItem productItem)
     {

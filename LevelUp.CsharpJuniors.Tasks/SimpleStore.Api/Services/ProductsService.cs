@@ -16,7 +16,13 @@ public sealed class ProductsService : IProductsService
     public async Task<IEnumerable<ProductItem>> GetProducts()
     {
         var entities = await _productsRepository.GetAll();
-        return entities.Select(e => new ProductItem(e.Id, e.Name, e.CategoryId, e.Description));
+        return entities.Select(ProductItem.FromEntity);
+    }
+
+    public async Task<ProductItem?> GetProductById(Guid productId)
+    {
+        var productEntity = await _productsRepository.GetById(productId);
+        return productEntity == null ? null : ProductItem.FromEntity(productEntity);
     }
 
     public async Task AddProduct(ProductItem productItem)
