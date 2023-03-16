@@ -7,22 +7,30 @@ public sealed class ProductsServiceProxy : IProductsServiceProxy
 {
     private readonly HttpClient _client;
 
-    private readonly BackendEndpoints _endpoints;
+    private readonly Endpoints _endpoints;
 
-    public ProductsServiceProxy(HttpClient client, IOptions<BackendEndpoints> endpoints)
+    public ProductsServiceProxy(HttpClient client, IOptions<Endpoints> endpoints)
     {
         _client = client;
         _endpoints = endpoints.Value;
     }
 
-    public Task<IEnumerable<ProductItem>> GetAllProducts()
+    public async Task<IEnumerable<ProductItem>> GetAllProducts()
     {
-        throw new NotImplementedException();
+        var requestUri = $"{_endpoints.BaseUrl}{_endpoints.GetAllProducts}";
+        var items = await MakeGet<IEnumerable<ProductItem>>(requestUri)
+                    ?? Enumerable.Empty<ProductItem>();
+
+        return items;
     }
 
-    public Task<ProductItem> GetProductById(Guid id)
+    public async Task<ProductItem> GetProductById(Guid id)
     {
-        throw new NotImplementedException();
+        var requestUri = $"{_endpoints.BaseUrl}{_endpoints.GetProductById}";
+        requestUri = string.Format(requestUri, id);
+        var item = await MakeGet<ProductItem>(requestUri);
+
+        return item!;
     }
 
     private async Task<T?> MakeGet<T>(string requestUri)
@@ -34,8 +42,8 @@ public sealed class ProductsServiceProxy : IProductsServiceProxy
         };
         
         using var response = await _client.SendAsync(request);
-        var item = await response.Content.ReadFromJsonAsync<T>();
+        var result = await response.Content.ReadFromJsonAsync<T>();
 
-        return item;
+        return result;
     }
 }
